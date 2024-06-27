@@ -18,7 +18,11 @@ function buscar() {
   imagem.style.width = '200'
   fetch(`https://dog.ceo/api/breed/${palavraBusca}/images`)
     .then(response => response.json())
-    .then(data => imagem.setAttribute('src', data.message['0']))
+    .then(data => imagem.setAttribute('src', data.message[getRandom(1, 100)]))
   document.getElementById('lista').innerText = ''
   document.getElementById('lista').appendChild(imagem)
+}
+
+function getRandom(min, max) {
+  return Math.floor(Math.random() * (max - min) + min);
 }
