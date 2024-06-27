@@ -27,13 +27,13 @@ function listar() {
 }
 
 function buscar() {
-  let palavraBusca = document.getElementById('palavraBusca').value
-  let imagem = document.createElement('img')
-  fetch(`https://dog.ceo/api/breed/${palavraBusca}/images`)
+  let palavraBusca = document.getElementById('palavraBusca').value;
+  let imagem = document.createElement('img');
+  fetch(`https://dog.ceo/api/breed/${palavraBusca.toLowerCase()}/images`)
     .then(response => response.json())
-    .then(data => imagem.setAttribute('src', data.message[getRandom(1, 100)]))
-  document.getElementById('lista').innerText = ''
-  document.getElementById('lista').appendChild(imagem)
+    .then(data => imagem.setAttribute('src', data.message[getRandom(1, data.message.length)]));
+  document.getElementById('lista').innerText = '';
+  document.getElementById('lista').appendChild(imagem);
 }
 
 function getRandom(min, max) {
