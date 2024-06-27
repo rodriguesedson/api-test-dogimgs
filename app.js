@@ -1,7 +1,21 @@
+window.addEventListener('keydown', (event) => {
+  if(event.key === '1') {
+    document.getElementById('botaoBuscar').focus();
+  }
+})
+
+window.addEventListener('keydown', (event) => {
+  if(event.key === '2') {
+    document.getElementById('palavraBusca').focus();
+    document.getElementById('palavraBusca')
+  }
+})
+
 function listar() {
   fetch('https://dog.ceo/api/breeds/list/all')
     .then(response => response.json())
     .then(data => {
+      document.getElementById('lista').innerText = ''
       for(let i in data.message) {
         if(document.getElementById('lista').innerText == '') {
           document.getElementById('lista').innerText += `${i}`

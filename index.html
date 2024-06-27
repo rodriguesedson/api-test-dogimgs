@@ -7,7 +7,14 @@
   <title>Document</title>
 </head>
 <body>
-  <button onclick="listar()">Listar raças</button>
+  <p>
+    Pressione: '1' (seleciona 'Listar raças') <br>
+    Pressione: Enter, Tab <br>
+    Ou pressione '2' (Selecionar barra de busca) <br>
+    Digite a raça <br>
+    Pressione: Tab, Enter
+  </p>
+  <button onclick="listar()" id="botaoBuscar">Listar raças</button>
   <input type="text" placeholder="ex.: puggle" id="palavraBusca">
   <button onclick="buscar()">Buscar</button>
   <div id="lista">
