@@ -1,0 +1,38 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.lista {
+  max-width: 500px;
+  text-align: justify;
+}
+
+img {
+  max-width: 500px;
+}
+
+@media (max-width: 720px) {
+  .container {
+    font-size: 18px;
+    gap: 20px;
+  }
+
+  .barra-busca {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-width: 250px;
+  }
+
+  .btn {
+    font-size: 16px;
+  }
+
+  img {
+    max-width: 300px;
+  }
+}

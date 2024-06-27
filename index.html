@@ -3,22 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="app.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
   <title>Document</title>
 </head>
 <body>
-  <p>
-    Pressione: '1' (seleciona 'Listar raças') <br>
-    Pressione: Enter, Tab <br>
-    Ou pressione '2' (Selecionar barra de busca) <br>
-    Digite a raça <br>
-    Pressione: Tab, Enter
-  </p>
-  <button onclick="listar()" id="botaoBuscar">Listar raças</button>
-  <input type="text" placeholder="ex.: puggle" id="palavraBusca">
-  <button onclick="buscar()">Buscar</button>
-  <div id="lista">
+  <div class="container">
+    <p>
+      Pressione: '1' (seleciona 'Listar raças') <br>
+      Pressione: Enter, Tab <br>
+      Ou pressione '2' (Selecionar barra de busca) <br>
+      Digite a raça <br>
+      Pressione: Tab, Enter
+    </p>
+    <div class="barra-busca">
+      <button class="btn" onclick="listar()" id="botaoBuscar">Listar raças</button>
+      <input type="text" placeholder="ex.: puggle" id="palavraBusca">
+      <button class="btn" onclick="buscar()">Buscar</button>
+    </div>
+    <div id="lista" class="lista">
     
+    </div>
   </div>
 </body>
 </html>

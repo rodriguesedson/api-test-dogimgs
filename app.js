@@ -17,7 +17,7 @@ function listar() {
     .then(data => {
       document.getElementById('lista').innerText = ''
       for(let i in data.message) {
-        if(document.getElementById('lista').innerText == '') {
+        if(document.getElementById('lista').innerText === '') {
           document.getElementById('lista').innerText += `${i}`
         } else {
           document.getElementById('lista').innerText += `, ${i}`
@@ -29,7 +29,6 @@ function listar() {
 function buscar() {
   let palavraBusca = document.getElementById('palavraBusca').value
   let imagem = document.createElement('img')
-  imagem.style.width = '200'
   fetch(`https://dog.ceo/api/breed/${palavraBusca}/images`)
     .then(response => response.json())
     .then(data => imagem.setAttribute('src', data.message[getRandom(1, 100)]))
